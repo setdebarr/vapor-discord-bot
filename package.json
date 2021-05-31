@@ -1,0 +1,42 @@
+{
+	"name": "vapor-discord-bot",
+	"version": "0.0.1",
+	"description": "A discord bot",
+	"main": "index.js",
+	"scripts": {
+		"start": "node .",
+		"dev:start": "nodemon . --dev",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"test": "jest --coverage",
+		"test:lint": "npm run lint && npm run test"
+	},
+	"author": "Sean DeBarr",
+	"license": "MIT",
+	"dependencies": {
+		"discord.js": "^12.5.3",
+		"minimist": "^1.2.5",
+		"winston": "^3.3.3",
+		"winston-daily-rotate-file": "^4.5.5"
+	},
+	"devDependencies": {
+		"@types/jest": "^26.0.23",
+		"eslint": "^7.25.0",
+		"jest": "^27.0.1"
+	},
+	"jest": {
+		"collectCoverageFrom": [
+			"**/*.{js,jsx}",
+			"!**/node_modules/**",
+			"!**/coverage/**"
+		],
+		"coverageThreshold": {
+			"global": {
+				"statements": 100,
+				"branches": 100,
+				"functions": 100,
+				"lines": 100
+			}
+		}
+	}
+}
