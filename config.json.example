@@ -1,5 +1,6 @@
 {
-	"prefix":     ">",
+	"prefix": ">",
+	"production": true,
 	"token_prod": "",
-	"token_dev":  ""
+	"token_dev": ""
 }

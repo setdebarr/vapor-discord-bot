@@ -2,41 +2,36 @@
 	"name": "vapor-discord-bot",
 	"version": "0.0.1",
 	"description": "A discord bot",
-	"main": "index.js",
+	"main": "dist/src/index.js",
 	"scripts": {
-		"start": "node .",
-		"dev:start": "nodemon . --dev",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"test": "jest --coverage",
-		"test:lint": "npm run lint && npm run test"
+		"dev:run": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./dist/src/index.js\"",
+		"build": "tsc",
+		"fix": "gts fix",
+		"lint": "gts lint",
+		"clean": "gts clean",
+		"test": "jest"
 	},
 	"author": "Sean DeBarr",
 	"license": "MIT",
-	"dependencies": {
-		"discord.js": "^12.5.3",
-		"minimist": "^1.2.5",
-		"winston": "^3.3.3",
-		"winston-daily-rotate-file": "^4.5.5"
-	},
 	"devDependencies": {
 		"@types/jest": "^26.0.23",
-		"eslint": "^7.28.0",
-		"jest": "^27.0.4"
+		"@types/node": "^15.12.2",
+		"@types/ws": "^7.4.4",
+		"gts": "^3.1.0",
+		"jest": "^27.0.4",
+		"ts-jest": "^27.0.3",
+		"tsc-watch": "^4.4.0",
+		"typescript": "^4.3.2"
 	},
-	"jest": {
-		"collectCoverageFrom": [
-			"**/*.{js,jsx}",
-			"!**/node_modules/**",
-			"!**/coverage/**"
-		],
-		"coverageThreshold": {
-			"global": {
-				"statements": 100,
-				"branches": 100,
-				"functions": 100,
-				"lines": 100
-			}
-		}
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/setdebarr/vapor-discord-bot.git"
+	},
+	"bugs": {
+		"url": "https://github.com/setdebarr/vapor-discord-bot/issues"
+	},
+	"homepage": "https://github.com/setdebarr/vapor-discord-bot#readme",
+	"dependencies": {
+		"discord.js": "^12.5.3"
 	}
 }
