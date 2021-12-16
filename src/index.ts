@@ -1,7 +1,7 @@
+require('dotenv').config();
 import Discord = require('discord.js');
-import config = require('../config.json');
 
-const client = new Discord.Client();
+const client = new Discord.Client({intents: [Discord.Intents.FLAGS.GUILDS]});
 
 client.on('ready', async () => {
 	console.log('The bot is ready');
@@ -11,15 +11,12 @@ client.on('ready', async () => {
 client.on('message', async message => {
 	if (message.author.bot) return;
 	console.log(`User: ${message.author.username} | ${message.content}`);
-	if (message.content.indexOf(config.prefix) !== 0) return;
+	if (message.content.indexOf('!') !== 0) return;
 
 	message.reply(
 		'Thank you for summoning me human. Unfortunately I do not have any commands to use yet. Try again later when I have had time to create some.'
 	);
 });
 
-if (config.production === false) {
-	client.login(config.token_dev);
-} else {
-	client.login(config.token_prod);
-}
+// Login to Discord
+client.login(process.env.BOT_TOKEN);
