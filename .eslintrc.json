@@ -1,6 +1,4 @@
 {
 	"root": true,
-	"plugins": ["@typescript-eslint"],
-	"extends": ["./node_modules/gts/"],
-	"rules": {"prettier/prettier": ["error", {"endOfLine": "auto"}]}
+	"extends": ["neon/common", "neon/node", "neon/prettier"]
 }

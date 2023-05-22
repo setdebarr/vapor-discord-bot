@@ -1,9 +1,29 @@
 {
-	"extends": "./node_modules/gts/tsconfig-google.json",
+	"$schema": "https://json.schemastore.org/tsconfig",
+
 	"compilerOptions": {
-		"rootDir": ".",
-		"outDir": "dist",
-		"resolveJsonModule": true
-	},
-	"include": ["src/**/*.ts", "tests/**/*.ts"]
+		"lib": ["es2023"],
+		"module": "CommonJS",
+		"target": "es2022",
+
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+
+		"checkJs": true,
+
+		"outDir": "prod"
+	}
 }
