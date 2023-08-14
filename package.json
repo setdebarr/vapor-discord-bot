@@ -20,7 +20,7 @@
 		"@types/node": "^18.16.14",
 		"@typescript-eslint/eslint-plugin": "^5.59.11",
 		"@typescript-eslint/parser": "^5.59.11",
-		"eslint": "^8.41.0",
+		"eslint": "^8.47.0",
 		"eslint-config-neon": "^0.1.47",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-formatter-pretty": "^5.0.0",
