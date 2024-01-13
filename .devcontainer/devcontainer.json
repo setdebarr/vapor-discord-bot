@@ -1,0 +1,36 @@
+{
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"postStartCommand": "bash -i -c 'asdf install && npm install'",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mads-hartmann.bash-ide-vscode",
+				"wmaurer.change-case",
+				"streetsidesoftware.code-spell-checker",
+				"naumovs.color-highlight",
+				"joshbolduc.commitlint",
+				"EditorConfig.EditorConfig",
+				"dbaeumer.vscode-eslint",
+				"codezombiech.gitignore",
+				"eamodio.gitlens",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-preview-github-styles",
+				"DavidAnson.vscode-markdownlint",
+				"christian-kohler.npm-intellisense",
+				"christian-kohler.path-intellisense",
+				"esbenp.prettier-vscode",
+				"mechatroner.rainbow-csv",
+				"foxundermoon.shell-format",
+				"timonwong.shellcheck",
+				"Gruntfuggly.todo-tree",
+				"pflannery.vscode-versionlens",
+				"vivaxy.vscode-conventional-commits",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+
+	// "forwardPorts": [3000]
+}

@@ -4,5 +4,29 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.words": [
+			"Anson",
+			"azuretools",
+			"bierner",
+			"codezombiech",
+			"dbaeumer",
+			"eamodio",
+			"esbenp",
+			"foxundermoon",
+			"Gruntfuggly",
+			"joshbolduc",
+			"kohler",
+			"mechatroner",
+			"naumovs",
+			"pflannery",
+			"shellcheck",
+			"timonwong",
+			"versionlens",
+			"vivaxy",
+			"wmaurer",
+			"yzhang"
+		],
+		"typescript.tsdk": "node_modules/typescript/lib"
+	}
 }
